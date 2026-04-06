@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 550">
+  <rect width="950" height="550" fill="#fcfcfc"/>
+  
+  <style>
+    .header { fill: #4a5c76; stroke: #2a3c56; stroke-width: 1; }
+    .label { fill: white; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; }
+    .row-label { fill: white; font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; text-anchor: middle; }
+    .layer-label { fill: #333; font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; text-anchor: start; }
+    .cell-text { fill: #222; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; text-anchor: middle; }
+    .cell-subtext { fill: #555; font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; font-style: italic; }
+    .grid { fill: none; stroke: #bbb; stroke-width: 0.5; }
+    
+    /* Layer Cake Backgrounds */
+    .layer-trust { fill: #e6f7ff; }
+    .layer-onto { fill: #fff5cc; }
+    .layer-rdf { fill: #ffe6e6; }
+    .layer-xml { fill: #e6ffe6; }
+    .layer-uri { fill: #f2e6ff; }
+  </style>
+
+  <!-- Background Stratification (Semantic Web Layers) -->
+  <rect class="layer-trust" x="130" y="60" width="655" height="75"/>
+  <rect class="layer-onto" x="130" y="135" width="655" height="75"/>
+  <rect class="layer-rdf" x="130" y="210" width="655" height="75"/>
+  <rect class="layer-xml" x="130" y="285" width="655" height="75"/>
+  <rect class="layer-uri" x="130" y="360" width="655" height="75"/>
+
+  <!-- Column Headers -->
+  <g class="header">
+    <rect x="130" y="10" width="105" height="45" rx="3"/><rect x="240" y="10" width="105" height="45" rx="3"/>
+    <rect x="350" y="10" width="105" height="45" rx="3"/><rect x="460" y="10" width="105" height="45" rx="3"/>
+    <rect x="570" y="10" width="105" height="45" rx="3"/><rect x="680" y="10" width="105" height="45" rx="3"/>
+  </g>
+  <g class="label">
+    <text x="182" y="38">Why (Motivation)</text><text x="292" y="38">How (Process)</text><text x="402" y="38">What (Data)</text>
+    <text x="512" y="38">Who (People)</text><text x="622" y="38">Where (Network)</text><text x="732" y="38">When (Time)</text>
+  </g>
+
+  <!-- Row Headers -->
+  <g class="header">
+    <rect x="10" y="60" width="115" height="75" rx="3"/><rect x="10" y="135" width="115" height="75" rx="3"/>
+    <rect x="10" y="210" width="115" height="75" rx="3"/><rect x="10" y="285" width="115" height="75" rx="3"/>
+    <rect x="10" y="360" width="115" height="75" rx="3"/>
+  </g>
+  <g class="row-label">
+    <text x="67" y="100">Contextual</text><text x="67" y="175">Conceptual</text>
+    <text x="67" y="250">Logical</text><text x="67" y="325">Physical</text>
+    <text x="67" y="400">Detailed</text>
+  </g>
+
+  <!-- Semantic Web Vertical Side Labels (Right side) -->
+  <g class="layer-label">
+    <text x="795" y="98">TBL: User Interface</text>
+    <text x="795" y="112">TBL: Proof &amp; Trust</text>
+    
+    <text x="795" y="167">TBL: Logic (Rules)</text>
+    <text x="795" y="181">TBL: Ontology (OWL)</text>
+
+    <text x="795" y="243">TBL: RDF Schema</text>
+    <text x="795" y="257">TBL: RDF (Graph)</text>
+
+    <text x="795" y="315">TBL: Namespaces</text>
+    <text x="795" y="329">TBL: XML</text>
+
+    <text x="795" y="390">TBL: URI / IRI</text>
+    <text x="795" y="404">TBL: Unicode</text>
+  </g>
+
+  <!-- Grid Lines -->
+  <g class="grid">
+    <rect x="130" y="60" width="655" height="375"/>
+    <line x1="235" y1="60" x2="235" y2="435"/><line x1="345" y1="60" x2="345" y2="435"/>
+    <line x1="455" y1="60" x2="455" y2="435"/><line x1="565" y1="60" x2="565" y2="435"/>
+    <line x1="675" y1="60" x2="675" y2="435"/>
+    <line x1="130" y1="135" x2="785" y2="135"/><line x1="130" y1="210" x2="785" y2="210"/>
+    <line x1="130" y1="285" x2="785" y2="285"/><line x1="130" y1="360" x2="785" y2="360"/>
+  </g>
+
+  <!-- Cell Content (Fused Reality) -->
+  <g class="cell-text">
+    <!-- Row 1: Trust & Contextual -->
+    <text x="182" y="90">Auditor Trust</text>
+    <text x="182" y="105" class="cell-subtext">Compliance via ERP</text>
+
+    <text x="292" y="90">Report Workflow</text>
+    <text x="292" y="105" class="cell-subtext">Dashboards / BI</text>
+
+    <text x="402" y="90">Blockchain Inmutability</text>
+    <text x="402" y="105" class="cell-subtext">Emisión de Acciones</text>
+
+    <text x="512" y="90">Certified Personnel</text>
+    <text x="512" y="105" class="cell-subtext">Corporate Ed Platform</text>
+
+    <text x="622" y="90">Global Network</text>
+    <text x="622" y="105" class="cell-subtext">Enterprise Perimeter</text>
+
+    <text x="732" y="90">Fiscal Periods</text>
+    <text x="732" y="105" class="cell-subtext">Real-time Ledgers</text>
+    
+    <!-- Row 2: Ontology & Conceptual -->
+    <text x="182" y="165">Business Rules</text>
+    <text x="182" y="180" class="cell-subtext">DFRNT Logic</text>
+
+    <text x="292" y="165">MapForce Transform</text>
+    <text x="292" y="180" class="cell-subtext">JSON-LD to XBRL GL</text>
+
+    <text x="402" y="165">XBRL/ESG Taxonomies</text>
+    <text x="402" y="180" class="cell-subtext">SRCD, ISSB &amp; GRI</text>
+
+    <text x="512" y="165">1edtech Competencies</text>
+    <text x="512" y="180" class="cell-subtext">Ed/Skills Ontologies</text>
+
+    <text x="622" y="165">Digital Ocean Nodes</text>
+    <text x="622" y="180" class="cell-subtext">BaseX / Nginx</text>
+
+    <text x="732" y="165">Event Sequencing</text>
+    <text x="732" y="180" class="cell-subtext">Transaction Logs</text>
+
+    <!-- Row 3: RDF & Logical -->
+    <text x="182" y="240">Data Integrity</text>
+    <text x="182" y="255" class="cell-subtext">SHACL Validation</text>
+
+    <text x="292" y="240">MapForce Mapping</text>
+    <text x="292" y="255" class="cell-subtext">UBL to JSON-LD</text>
+
+    <text x="402" y="240">JSON-LD Models</text>
+    <text x="402" y="255" class="cell-subtext">TerminusDB Graph</text>
+
+    <text x="512" y="240">System Identities</text>
+    <text x="512" y="255" class="cell-subtext">User Auth RDF</text>
+
+    <text x="622" y="240">API Endpoints</text>
+    <text x="622" y="255" class="cell-subtext">HTTPS / /static/</text>
+
+    <text x="732" y="240">Time-Series Links</text>
+    <text x="732" y="255" class="cell-subtext">Timestamps RDF</text>
+
+    <!-- Row 4: XML & Physical -->
+    <text x="182" y="315">Validation Specs</text>
+    <text x="182" y="330" class="cell-subtext">XML XSD Schemas</text>
+
+    <text x="292" y="315">Ingest Programs</text>
+    <text x="292" y="330" class="cell-subtext">BaseX Client / Powershell</text>
+
+    <text x="402" y="315">UBL Documents</text>
+    <text x="402" y="330" class="cell-subtext">XML Invoices</text>
+
+    <text x="512" y="315">Node Clients</text>
+    <text x="512" y="330" class="cell-subtext">Local Repositories</text>
+
+    <text x="622" y="315">Storage Drives</text>
+    <text x="622" y="330" class="cell-subtext">/var/lib/basex</text>
+
+    <text x="732" y="315">Creation Date</text>
+    <text x="732" y="330" class="cell-subtext">XML IssueTime</text>
+
+    <!-- Row 5: URI & Detailed -->
+    <text x="182" y="390">Context Flags</text>
+    <text x="182" y="405" class="cell-subtext">Unicode Strings</text>
+
+    <text x="292" y="390">Micro-Functions</text>
+    <text x="292" y="405" class="cell-subtext">Line-level logic</text>
+
+    <text x="402" y="390">XBRL Concept URIs</text>
+    <text x="402" y="405" class="cell-subtext">DFRNT Instance IDs</text>
+
+    <text x="512" y="390">Blockchain Credentials</text>
+    <text x="512" y="405" class="cell-subtext">Aptitude Tokens (Badges)</text>
+
+    <text x="622" y="390">Memory Addr</text>
+    <text x="622" y="405" class="cell-subtext">Ports / IP</text>
+
+    <text x="732" y="390">Tick Constants</text>
+    <text x="732" y="405" class="cell-subtext">Epoch Timestamps</text>
+  </g>
+  <!-- Cell Coordinates (Spreadsheet style) -->
+  <g class="cell-subtext" style="fill:#999; font-size:8px; font-family:monospace; font-weight:normal; text-anchor:end;">
+    <!-- Row 1 -->
+    <text x="230" y="130">A1</text><text x="340" y="130">B1</text><text x="450" y="130">C1</text>
+    <text x="560" y="130">D1</text><text x="670" y="130">E1</text><text x="780" y="130">F1</text>
+    <!-- Row 2 -->
+    <text x="230" y="205">A2</text><text x="340" y="205">B2</text><text x="450" y="205">C2</text>
+    <text x="560" y="205">D2</text><text x="670" y="205">E2</text><text x="780" y="205">F2</text>
+    <!-- Row 3 -->
+    <text x="230" y="280">A3</text><text x="340" y="280">B3</text><text x="450" y="280">C3</text>
+    <text x="560" y="280">D3</text><text x="670" y="280">E3</text><text x="780" y="280">F3</text>
+    <!-- Row 4 -->
+    <text x="230" y="355">A4</text><text x="340" y="355">B4</text><text x="450" y="355">C4</text>
+    <text x="560" y="355">D4</text><text x="670" y="355">E4</text><text x="780" y="355">F4</text>
+    <!-- Row 5 -->
+    <text x="230" y="430">A5</text><text x="340" y="430">B5</text><text x="450" y="430">C5</text>
+    <text x="560" y="430">D5</text><text x="670" y="430">E5</text><text x="780" y="430">F5</text>
+  </g>
+  
+  <g transform="translate(10, 480)">
+    <text fill="#0066cc" font-family="Arial, sans-serif" font-size="11px" text-decoration="none" font-weight="bold">
+        Conceptual Fusion: Zachman Enterprise Framework + Tim Berners-Lee Semantic Web Stack
+    </text>
+    <a href="https://zachman-feac.com/zachman/about-the-zachman-framework" target="_blank" rel="noopener noreferrer">
+      <text y="20" fill="#0066cc" font-family="Arial, sans-serif" font-size="10px" text-decoration="underline">
+        Reference 1: Zachman Framework (https://zachman-feac.com/zachman/about-the-zachman-framework)
+      </text>
+    </a>
+    <a href="https://www.researchgate.net/publication/221548717_Towards_an_Ontology-Based_Solution_for_Managing_License_Agreement_Using_Semantic_Desktop" target="_blank" rel="noopener noreferrer">
+      <text y="35" fill="#0066cc" font-family="Arial, sans-serif" font-size="10px" text-decoration="underline">
+        Reference 2: Ontology-Based Solutions (https://www.researchgate.net/publication/221548717...)
+      </text>
+    </a>
+  </g>
+</svg>
