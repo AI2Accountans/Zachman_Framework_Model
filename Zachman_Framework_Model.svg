@@ -59,7 +59,14 @@
     <text x="182" y="400">Rules Details</text><text x="292" y="400">Process Details</text><text x="402" y="400">Data Details</text>
     <text x="512" y="400">Role Details</text><text x="622" y="400">Location Details</text><text x="732" y="400">Event Details</text>
   </g>
-</svg>
 
+  <g transform="translate(10, 480)">
+    <a href="https://zachman-feac.com/zachman/about-the-zachman-framework" target="_blank" rel="noopener noreferrer">
+      <text fill="#0066cc" font-family="Arial, sans-serif" font-size="12px" text-decoration="underline">
+        Fuente: https://zachman-feac.com/zachman/about-the-zachman-framework
+      </text>
+    </a>
+  </g>
+</svg>
 
 
