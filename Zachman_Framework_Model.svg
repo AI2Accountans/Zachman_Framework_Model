@@ -1,5 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
-  <rect width="1000" height="600" fill="white"/>
-  
-  <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Zachman_Framework_Model.svg/1200px-Zachman_Framework_Model.svg.png" x="0" y="0" width="1000" height="600" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#f8f9fa"/>
+  <g fill="#6B5B95" stroke="#4a3f66" stroke-width="1">
+    <rect x="135" y="10" width="100" height="60" rx="2"/>
+    <rect x="245" y="10" width="100" height="60" rx="2"/>
+    <rect x="355" y="10" width="100" height="60" rx="2"/>
+    <rect x="465" y="10" width="100" height="60" rx="2"/>
+    <rect x="575" y="10" width="100" height="60" rx="2"/>
+    <rect x="685" y="10" width="100" height="60" rx="2"/>
+    
+    <rect x="10" y="80" width="115" height="60" rx="2"/>
+    <rect x="10" y="150" width="115" height="60" rx="2"/>
+    <rect x="10" y="220" width="115" height="60" rx="2"/>
+    <rect x="10" y="290" width="115" height="60" rx="2"/>
+    <rect x="10" y="360" width="115" height="60" rx="2"/>
+  </g>
+  <g fill="white" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">
+    <text x="185" y="45">Why</text>
+    <text x="295" y="45">How</text>
+    <text x="405" y="45">What</text>
+    <text x="515" y="45">Who</text>
+    <text x="625" y="45">Where</text>
+    <text x="735" y="45">When</text>
+  </g>
+  <text x="400" y="250" fill="#333" font-family="sans-serif" font-size="20" text-anchor="middle">Diagrama de Zachman (Optimizado para GitHub)</text>
 </svg>
