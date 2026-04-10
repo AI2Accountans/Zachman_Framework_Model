@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 550">
-  <rect width="950" height="550" fill="#fcfcfc"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 635">
+  <rect width="950" height="635" fill="#fcfcfc"/>
   
   <style>
     .header { fill: #4a5c76; stroke: #2a3c56; stroke-width: 1; }
@@ -16,6 +16,7 @@
     .layer-rdf { fill: #ffe6e6; }
     .layer-xml { fill: #e6ffe6; }
     .layer-uri { fill: #f2e6ff; }
+    .layer-inst { fill: #f0f0f0; }
   </style>
 
   <!-- Background Stratification (Semantic Web Layers) -->
@@ -24,6 +25,7 @@
   <rect class="layer-rdf" x="130" y="210" width="655" height="75"/>
   <rect class="layer-xml" x="130" y="285" width="655" height="75"/>
   <rect class="layer-uri" x="130" y="360" width="655" height="75"/>
+  <rect class="layer-inst" x="130" y="435" width="655" height="75"/>
 
   <!-- Column Headers -->
   <g class="header">
@@ -41,11 +43,14 @@
     <rect x="10" y="60" width="115" height="75" rx="3"/><rect x="10" y="135" width="115" height="75" rx="3"/>
     <rect x="10" y="210" width="115" height="75" rx="3"/><rect x="10" y="285" width="115" height="75" rx="3"/>
     <rect x="10" y="360" width="115" height="75" rx="3"/>
+    <rect x="10" y="435" width="115" height="75" rx="3"/>
   </g>
   <g class="row-label">
     <text x="67" y="100">Contextual</text><text x="67" y="175">Conceptual</text>
     <text x="67" y="250">Logical</text><text x="67" y="325">Physical</text>
     <text x="67" y="400">Detailed</text>
+    <text x="67" y="468">Functioning</text>
+    <text x="67" y="482">Enterprise</text>
   </g>
 
   <!-- Semantic Web Vertical Side Labels (Right side) -->
@@ -64,16 +69,20 @@
 
     <text x="795" y="390">TBL: URI / IRI</text>
     <text x="795" y="404">TBL: Unicode</text>
+
+    <text x="795" y="465">TBL: Linked Data Assets</text>
+    <text x="795" y="479">TBL: HTTP Protocols</text>
   </g>
 
   <!-- Grid Lines -->
   <g class="grid">
-    <rect x="130" y="60" width="655" height="375"/>
-    <line x1="235" y1="60" x2="235" y2="435"/><line x1="345" y1="60" x2="345" y2="435"/>
-    <line x1="455" y1="60" x2="455" y2="435"/><line x1="565" y1="60" x2="565" y2="435"/>
-    <line x1="675" y1="60" x2="675" y2="435"/>
+    <rect x="130" y="60" width="655" height="450"/>
+    <line x1="235" y1="60" x2="235" y2="510"/><line x1="345" y1="60" x2="345" y2="510"/>
+    <line x1="455" y1="60" x2="455" y2="510"/><line x1="565" y1="60" x2="565" y2="510"/>
+    <line x1="675" y1="60" x2="675" y2="510"/>
     <line x1="130" y1="135" x2="785" y2="135"/><line x1="130" y1="210" x2="785" y2="210"/>
     <line x1="130" y1="285" x2="785" y2="285"/><line x1="130" y1="360" x2="785" y2="360"/>
+    <line x1="130" y1="435" x2="785" y2="435"/>
   </g>
 
   <!-- Cell Content (Fused Reality) -->
@@ -172,6 +181,25 @@
 
     <text x="732" y="390">Tick Constants</text>
     <text x="732" y="405" class="cell-subtext">Epoch Timestamps</text>
+
+    <!-- Row 6: Instances & Enterprise -->
+    <text x="182" y="465">Realized Value</text>
+    <text x="182" y="480" class="cell-subtext">Economic Exchanges</text>
+
+    <text x="292" y="465">Live Execution</text>
+    <text x="292" y="480" class="cell-subtext">Running Containers</text>
+
+    <text x="402" y="465">Graph Instances</text>
+    <text x="402" y="480" class="cell-subtext">TerminusDB Instances</text>
+
+    <text x="512" y="465">Active Actors</text>
+    <text x="512" y="480" class="cell-subtext">Authentic Sessions</text>
+
+    <text x="622" y="465">Network Traffic</text>
+    <text x="622" y="480" class="cell-subtext">TCP/IP / Routing</text>
+
+    <text x="732" y="465">Operational Logs</text>
+    <text x="732" y="480" class="cell-subtext">Real-time Trails</text>
   </g>
   <!-- Cell Coordinates (Spreadsheet style) -->
   <g class="cell-subtext" style="fill:#999; font-size:8px; font-family:monospace; font-weight:normal; text-anchor:end;">
@@ -190,9 +218,12 @@
     <!-- Row 5 -->
     <text x="230" y="430">A5</text><text x="340" y="430">B5</text><text x="450" y="430">C5</text>
     <text x="560" y="430">D5</text><text x="670" y="430">E5</text><text x="780" y="430">F5</text>
+    <!-- Row 6 -->
+    <text x="230" y="505">A6</text><text x="340" y="505">B6</text><text x="450" y="505">C6</text>
+    <text x="560" y="505">D6</text><text x="670" y="505">E6</text><text x="780" y="505">F6</text>
   </g>
   
-  <g transform="translate(10, 480)">
+  <g transform="translate(10, 560)">
     <text fill="#0066cc" font-family="Arial, sans-serif" font-size="11px" text-decoration="none" font-weight="bold">
         Conceptual Fusion: Zachman Enterprise Framework + Tim Berners-Lee Semantic Web Stack
     </text>
