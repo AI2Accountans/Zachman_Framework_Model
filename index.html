@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Reference Atlas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Enterprise Reference Atlas</h1>
+        <p>A Semantic Fusion of Zachman Framework and TBL Semantic Web Stack</p>
+    </header>
+
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Explore Layers</h3>
+            <ul id="layer-filters">
+                <li data-layer="all" class="active">View All Layers</li>
+                <li data-layer="layer-trust">Trust & Contextual</li>
+                <li data-layer="layer-onto">Ontology & Conceptual</li>
+                <li data-layer="layer-rdf">RDF & Logical</li>
+                <li data-layer="layer-xml">XML & Physical</li>
+                <li data-layer="layer-uri">URI & Detailed</li>
+                <li data-layer="layer-inst">Instances & Enterprise</li>
+            </ul>
+
+            <h3>Explore Systems</h3>
+            <ul id="column-filters">
+                <li data-col="all" class="active">View All Systems</li>
+                <li data-col="col-why">Why (Motivation)</li>
+                <li data-col="col-how">How (Process)</li>
+                <li data-col="col-what">What (Data)</li>
+                <li data-col="col-who">Who (People)</li>
+                <li data-col="col-where">Where (Network)</li>
+                <li data-col="col-when">When (Time)</li>
+            </ul>
+        </aside>
+
+        <!-- Main Grid Area -->
+        <main class="atlas-container">
+            <div class="atlas-grid">
+                <!-- Top Header Row -->
+                <div class="header-cell corner">Aspect &rarr;<br>Layer &darr;</div>
+                <div class="header-cell col-why">Why<br>(Motivation)</div>
+                <div class="header-cell col-how">How<br>(Process)</div>
+                <div class="header-cell col-what">What<br>(Data)</div>
+                <div class="header-cell col-who">Who<br>(People)</div>
+                <div class="header-cell col-where">Where<br>(Network)</div>
+                <div class="header-cell col-when">When<br>(Time)</div>
+
+                <!-- Row 1 -->
+                <div class="header-cell row-header layer-trust">
+                    <strong>Contextual</strong><br>
+                    <span class="tbl-layer">TBL: Trust & UI</span>
+                </div>
+                <div class="holon-cell layer-trust col-why" data-cell="A1">
+                    <div class="title">Auditor Trust</div>
+                    <div class="subtext">Compliance via ERP</div>
+                </div>
+                <div class="holon-cell layer-trust col-how" data-cell="B1">
+                    <div class="title">Report Workflow</div>
+                    <div class="subtext">Dashboards / BI</div>
+                </div>
+                <div class="holon-cell layer-trust col-what" data-cell="C1">
+                    <div class="title">Blockchain Immutability</div>
+                    <div class="subtext">Emisión de Acciones</div>
+                </div>
+                <div class="holon-cell layer-trust col-who" data-cell="D1">
+                    <div class="title">Certified Personnel</div>
+                    <div class="subtext">Corporate Ed Platform</div>
+                </div>
+                <div class="holon-cell layer-trust col-where" data-cell="E1">
+                    <div class="title">Global Network</div>
+                    <div class="subtext">Enterprise Perimeter</div>
+                </div>
+                <div class="holon-cell layer-trust col-when" data-cell="F1">
+                    <div class="title">Fiscal Periods</div>
+                    <div class="subtext">Real-time Ledgers</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="header-cell row-header layer-onto">
+                    <strong>Conceptual</strong><br>
+                    <span class="tbl-layer">TBL: Ontology (OWL)</span>
+                </div>
+                <div class="holon-cell layer-onto col-why" data-cell="A2">
+                    <div class="title">Business Rules</div>
+                    <div class="subtext">DFRNT Logic</div>
+                </div>
+                <div class="holon-cell layer-onto col-how" data-cell="B2">
+                    <div class="title">MapForce Transform</div>
+                    <div class="subtext">JSON-LD to XBRL GL</div>
+                </div>
+                <div class="holon-cell layer-onto col-what" data-cell="C2">
+                    <div class="title">XBRL/ESG Taxonomies</div>
+                    <div class="subtext">SRCD, ISSB & GRI</div>
+                </div>
+                <div class="holon-cell layer-onto col-who" data-cell="D2">
+                    <div class="title">1edtech Competencies</div>
+                    <div class="subtext">Ed/Skills Ontologies</div>
+                </div>
+                <div class="holon-cell layer-onto col-where" data-cell="E2">
+                    <div class="title">Digital Ocean Nodes</div>
+                    <div class="subtext">BaseX / Nginx</div>
+                </div>
+                <div class="holon-cell layer-onto col-when" data-cell="F2">
+                    <div class="title">Event Sequencing</div>
+                    <div class="subtext">Transaction Logs</div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="header-cell row-header layer-rdf">
+                    <strong>Logical</strong><br>
+                    <span class="tbl-layer">TBL: RDF (Graph)</span>
+                </div>
+                <div class="holon-cell layer-rdf col-why" data-cell="A3">
+                    <div class="title">Data Integrity</div>
+                    <div class="subtext">SHACL Validation</div>
+                </div>
+                <div class="holon-cell layer-rdf col-how" data-cell="B3">
+                    <div class="title">MapForce Mapping</div>
+                    <div class="subtext">UBL to JSON-LD</div>
+                </div>
+                <div class="holon-cell layer-rdf col-what" data-cell="C3">
+                    <div class="title">JSON-LD Models</div>
+                    <div class="subtext">TerminusDB Graph</div>
+                </div>
+                <div class="holon-cell layer-rdf col-who" data-cell="D3">
+                    <div class="title">System Identities</div>
+                    <div class="subtext">User Auth RDF</div>
+                </div>
+                <div class="holon-cell layer-rdf col-where" data-cell="E3">
+                    <div class="title">API Endpoints</div>
+                    <div class="subtext">HTTPS / /static/</div>
+                </div>
+                <div class="holon-cell layer-rdf col-when" data-cell="F3">
+                    <div class="title">Time-Series Links</div>
+                    <div class="subtext">Timestamps RDF</div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="header-cell row-header layer-xml">
+                    <strong>Physical</strong><br>
+                    <span class="tbl-layer">TBL: XML & Namespaces</span>
+                </div>
+                <div class="holon-cell layer-xml col-why" data-cell="A4">
+                    <div class="title">Validation Specs</div>
+                    <div class="subtext">XML XSD Schemas</div>
+                </div>
+                <div class="holon-cell layer-xml col-how" data-cell="B4">
+                    <div class="title">Ingest Programs</div>
+                    <div class="subtext">BaseX Client / Powershell</div>
+                </div>
+                <div class="holon-cell layer-xml col-what" data-cell="C4">
+                    <div class="title">UBL Documents</div>
+                    <div class="subtext">XML Invoices</div>
+                </div>
+                <div class="holon-cell layer-xml col-who" data-cell="D4">
+                    <div class="title">Node Clients</div>
+                    <div class="subtext">Local Repositories</div>
+                </div>
+                <div class="holon-cell layer-xml col-where" data-cell="E4">
+                    <div class="title">Storage Drives</div>
+                    <div class="subtext">/var/lib/basex</div>
+                </div>
+                <div class="holon-cell layer-xml col-when" data-cell="F4">
+                    <div class="title">Creation Date</div>
+                    <div class="subtext">XML IssueTime</div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="header-cell row-header layer-uri">
+                    <strong>Detailed</strong><br>
+                    <span class="tbl-layer">TBL: URI / IRI</span>
+                </div>
+                <div class="holon-cell layer-uri col-why" data-cell="A5">
+                    <div class="title">Context Flags</div>
+                    <div class="subtext">Unicode Strings</div>
+                </div>
+                <div class="holon-cell layer-uri col-how" data-cell="B5">
+                    <div class="title">Micro-Functions</div>
+                    <div class="subtext">Line-level logic</div>
+                </div>
+                <div class="holon-cell layer-uri col-what" data-cell="C5">
+                    <div class="title">XBRL Concept URIs</div>
+                    <div class="subtext">DFRNT Instance IDs</div>
+                </div>
+                <div class="holon-cell layer-uri col-who" data-cell="D5">
+                    <div class="title">Blockchain Credentials</div>
+                    <div class="subtext">Aptitude Tokens (Badges)</div>
+                </div>
+                <div class="holon-cell layer-uri col-where" data-cell="E5">
+                    <div class="title">Memory Addr</div>
+                    <div class="subtext">Ports / IP</div>
+                </div>
+                <div class="holon-cell layer-uri col-when" data-cell="F5">
+                    <div class="title">Tick Constants</div>
+                    <div class="subtext">Epoch Timestamps</div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="header-cell row-header layer-inst">
+                    <strong>Functioning</strong><br>
+                    <span class="tbl-layer">TBL: Linked Data Assets</span>
+                </div>
+                <div class="holon-cell layer-inst col-why" data-cell="A6">
+                    <div class="title">Realized Value</div>
+                    <div class="subtext">Economic Exchanges</div>
+                </div>
+                <div class="holon-cell layer-inst col-how" data-cell="B6">
+                    <div class="title">Live Execution</div>
+                    <div class="subtext">Running Containers</div>
+                </div>
+                <div class="holon-cell layer-inst col-what" data-cell="C6">
+                    <div class="title">Graph Instances</div>
+                    <div class="subtext">TerminusDB Instances</div>
+                </div>
+                <div class="holon-cell layer-inst col-who" data-cell="D6">
+                    <div class="title">Active Actors</div>
+                    <div class="subtext">Authentic Sessions</div>
+                </div>
+                <div class="holon-cell layer-inst col-where" data-cell="E6">
+                    <div class="title">Network Traffic</div>
+                    <div class="subtext">TCP/IP / Routing</div>
+                </div>
+                <div class="holon-cell layer-inst col-when" data-cell="F6">
+                    <div class="title">Operational Logs</div>
+                    <div class="subtext">Real-time Trails</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Zoom-in View -->
+    <div id="holon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title">Holon Title</h2>
+                <div class="modal-tags">
+                    <span id="modal-cell" class="tag">C3</span>
+                    <span id="modal-layer" class="tag layer">Logical (RDF)</span>
+                    <span id="modal-col" class="tag col">What (Data)</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3>Implementation Details</h3>
+                <p id="modal-desc">Description of the holon goes here.</p>
+                <div class="mock-data-viz">
+                    <p class="mock-code" id="modal-code">
+                        // Mock JSON-LD or code snippet here
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
