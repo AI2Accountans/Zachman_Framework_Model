@@ -11,34 +11,131 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCol = document.getElementById('modal-col');
     const modalDesc = document.getElementById('modal-desc');
     const modalCode = document.getElementById('modal-code');
+    const modalImageContainer = document.getElementById('modal-image-container');
 
     // Mapping of mock data for deep dive
     const mockData = {
-        'C3': {
-            desc: "This holon fuses the 'What' (Data) column of Zachman with the 'RDF (Graph)' layer of the Semantic Web. TerminusDB instances are used to store linked JSON-LD models representing enterprise schemas.",
-            code: `// JSON-LD TerminusDB Document
+        'C4': {
+            desc: "Fusión de 'What' (Data) con 'XML & Namespaces'. Representa el documento operativo en bruto original (Facturas y Nómina Electrónica en XML UBL 2.1), actuando como el contrato de eventos de negocio y punto inicial de la ingesta sin sufrir mutilación relacional.",
+            code: `<!-- Evento de Negocio: Factura UBL 2.1 XML (C4) -->
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <cbc:ID>FECA1073</cbc:ID>
+    <cbc:IssueDate>2025-11-30</cbc:IssueDate>
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID>900824516</cbc:CompanyID>
+            </cac:PartyTaxScheme>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+</Invoice>`
+        },
+        'B4': {
+            desc: "Fusión de 'How' (Process) con 'XML & Namespaces'. El programa de ingesta y extracción que abre la base de datos transaccional NoSQL DDBB, escanea los documentos XML físicos y ejecuta consultas analíticas en XQuery para estructurar la información intermedia.",
+            code: `(: Programa de Ingesta & Consulta Transaccional XQuery (B4) :)
+for $doc in db:get("TRANSACTIONS")//(inv:Invoice | cac:Attachment/cac:ExternalReference)
+let $IssueDate := $doc/cbc:IssueDate
+let $NumeroFactura := $doc/cbc:ID
+let $ASP_NIT := $doc/cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID
+return
+  <record>
+    <entry name="Fecha">{data($IssueDate)}</entry>
+    <entry name="Numero">{data($NumeroFactura)}</entry>
+    <entry name="NIT">{data($ASP_NIT)}</entry>
+  </record>`
+        },
+        'B3': {
+            desc: "Fusión de 'How' (Process) con 'RDF (Graph)'. Mapeador semántico que traduce y normaliza las estructuras físicas planas de negocio XML/CSV en esquemas lógicos representados en JSON-LD (RDF) para permitir la coherencia del grafo.",
+            image: "Mapeo.jpg",
+            code: `// JSON-LD Logical Mapping Output (RDF Schema) (B3)
 {
-  "@context": "https://schema.enterprise.com/context.jsonld",
-  "@id": "urn:uuid:8b3d7a-11e9-9c2b-...",
-  "@type": "InvoiceModel",
-  "issuer": "company:HQ",
-  "validationShape": "shacl:InvoiceShape"
+  "@context": "https://enterprise.org/contexts/accounting.jsonld",
+  "@id": "urn:event:invoice:FECA1073",
+  "@type": "BusinessEvent",
+  "documentNumber": "FECA1073",
+  "supplier": "urn:party:nit:900824516",
+  "items": [
+    {
+      "code": "ITEM-001",
+      "price": 85000
+    }
+  ]
 }`
         },
-        'A1': {
-            desc: "Fuses 'Why' (Motivation) with 'Trust & UI'. Top-level auditor trust is achieved by transparent, verifiable compliance logic running inside the ERP UI.",
-            code: `<!-- UI Compliance Badge -->
-<div class="auditor-badge" data-trust-level="high">
-    Verified by Internal Audit Protocol
-    <span class="timestamp">2023-10-24</span>
-</div>`
+        'C3': {
+            desc: "Fusión de 'What' (Data) con 'RDF (Graph)'. Almacena y consolida los modelos lógicos de transacciones en la base de datos semántica Graph DDBB en formato de documentos JSON-LD vinculados.",
+            code: `// JSON-LD Logical Graph Representation (C3)
+{
+  "@context": {
+    "ex": "http://example.org/accounting#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "amount": { "@id": "ex:amount", "@type": "xsd:decimal" },
+    "account": { "@id": "ex:account", "@type": "xsd:string" }
+  },
+  "@id": "urn:entry:ledger:163035112",
+  "@type": "ex:LedgerEntry",
+  "account": "163035112",
+  "amount": 38319.33,
+  "debitCreditCode": "D"
+}`
+        },
+        'B2': {
+            desc: "Fusión de 'How' (Process) con 'Ontology (OWL)'. Mapeo conceptual de partida doble (Pacioli) adaptado al estándar. Distribuye aritméticamente los Débitos (Gasto 513095011, IVA 163035112) y Créditos (Retención de 15% 251905052, Cuentas por Pagar Neto 250205010).",
+            code: `<!-- Regla Conceptual de Partida Doble en MapForce (B2) -->
+<component name="if-else" library="core" uid="25" kind="4">
+    <sources>
+        <datapoint pos="0" key="debitCreditCode == 'D'"/>
+        <datapoint pos="1" key="amountDecimal"/>
+        <datapoint pos="2" key="decimalZero"/>
+    </sources>
+    <targets>
+        <datapoint pos="0" key="MO_DEBITO"/>
+    </targets>
+</component>`
+        },
+        'C2': {
+            desc: "Fusión de 'What' (Data) con 'Ontology (OWL)'. Las taxonomías de XBRL Global Ledger (GL) y marcos ESG que definen la semántica compartida y los conceptos contables mundiales, sirviendo de base semántica firme para la consistencia y la auditoría automática.",
+            code: `<!-- Referencia Conceptual Ontológica a la Taxonomía Global (C2) -->
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+       xmlns:gl-cor="http://www.xbrl.org/int/gl/cor/2015-03-25"
+       schemaRef="../Taxonomia/gl-plt-all-2015-03-25.xsd">
+    <gl-cor:accountingEntries>
+        <gl-cor:entryHeader>
+            <gl-cor:entryDetail>
+                <gl-cor:account>513095011</gl-cor:account>
+            </gl-cor:entryDetail>
+        </gl-cor:entryHeader>
+    </gl-cor:accountingEntries>
+</xbrl>`
+        },
+        'C6': {
+            desc: "Fusión de 'What' (Data) con 'Linked Data Assets'. Las instancias contables reales y activas en ejecución y sincronizadas dentro del grafo de base de datos Graph DDBB. Son la base para los reportes semánticos y el write-back al sistema relacional.",
+            code: `// Graph DDBB Instances Query Output (C6)
+[
+  {
+    "id": "urn:journal:entry:TRP-00002357",
+    "account": "111505110",
+    "description": "BANCOLOMBIA CTA CTE No. 3007917432",
+    "debit": 56392.51,
+    "credit": 0.00
+  },
+  {
+    "id": "urn:journal:entry:TRP-00002357",
+    "account": "251905040",
+    "description": "RET FTE REND.FIN REPO CRCC",
+    "debit": 0.00,
+    "credit": 56392.51
+  }
+]`
         },
         'default': {
-            desc: "Simulated zoom-in for this enterprise holon. In a production environment, this view would fetch live metrics, graph schemas, or code snippets relevant to the intersection of this specific Zachman Aspect and Semantic Layer.",
-            code: `[ System Log ]
-Fetching ontology bindings... OK
-Evaluating DFRNT logic... OK
-Linked data assets active.`
+            desc: "Visualización ampliada de este holón de la arquitectura empresarial. En este entorno, cada intersección Zachman/Fila Semántica representa una perspectiva formalizada y documentada de nuestro ecosistema.",
+            code: `[ Estado del Sistema ]
+Leyendo configuraciones ontológicas... OK
+Validando reglas de correspondencia en el Grafo... OK
+Nodos del Gemelo Digital Semántico activos.`
         }
     };
 
@@ -75,6 +172,12 @@ Linked data assets active.`
             const data = mockData[cellId] || mockData['default'];
             modalDesc.innerText = data.desc;
             modalCode.innerText = data.code;
+
+            if (data.image) {
+                modalImageContainer.innerHTML = `<img src="${data.image}" style="max-width: 100%; border-radius: 6px; margin-top: 15px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />`;
+            } else {
+                modalImageContainer.innerHTML = '';
+            }
 
             modal.style.display = 'block';
         });

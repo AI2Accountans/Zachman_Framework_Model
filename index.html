@@ -89,11 +89,11 @@
                     <div class="title">Business Rules</div>
                     <div class="subtext">DFRNT Logic</div>
                 </div>
-                <div class="holon-cell layer-onto col-how" data-cell="B2">
+                <div class="holon-cell layer-onto col-how implemented" data-cell="B2">
                     <div class="title">MapForce Transform</div>
                     <div class="subtext">JSON-LD to XBRL GL</div>
                 </div>
-                <div class="holon-cell layer-onto col-what" data-cell="C2">
+                <div class="holon-cell layer-onto col-what implemented" data-cell="C2">
                     <div class="title">XBRL/ESG Taxonomies</div>
                     <div class="subtext">SRCD, ISSB & GRI</div>
                 </div>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="holon-cell layer-onto col-where" data-cell="E2">
                     <div class="title">Digital Ocean Nodes</div>
-                    <div class="subtext">BaseX / Nginx</div>
+                    <div class="subtext">NoSQL DDBB / Nginx</div>
                 </div>
                 <div class="holon-cell layer-onto col-when" data-cell="F2">
                     <div class="title">Event Sequencing</div>
@@ -119,13 +119,13 @@
                     <div class="title">Data Integrity</div>
                     <div class="subtext">SHACL Validation</div>
                 </div>
-                <div class="holon-cell layer-rdf col-how" data-cell="B3">
+                <div class="holon-cell layer-rdf col-how implemented" data-cell="B3">
                     <div class="title">MapForce Mapping</div>
                     <div class="subtext">UBL to JSON-LD</div>
                 </div>
-                <div class="holon-cell layer-rdf col-what" data-cell="C3">
+                <div class="holon-cell layer-rdf col-what implemented" data-cell="C3">
                     <div class="title">JSON-LD Models</div>
-                    <div class="subtext">TerminusDB Graph</div>
+                    <div class="subtext">Graph DDBB Graph</div>
                 </div>
                 <div class="holon-cell layer-rdf col-who" data-cell="D3">
                     <div class="title">System Identities</div>
@@ -149,11 +149,11 @@
                     <div class="title">Validation Specs</div>
                     <div class="subtext">XML XSD Schemas</div>
                 </div>
-                <div class="holon-cell layer-xml col-how" data-cell="B4">
+                <div class="holon-cell layer-xml col-how implemented" data-cell="B4">
                     <div class="title">Ingest Programs</div>
-                    <div class="subtext">BaseX Client / Powershell</div>
+                    <div class="subtext">NoSQL DDBB Client / Powershell</div>
                 </div>
-                <div class="holon-cell layer-xml col-what" data-cell="C4">
+                <div class="holon-cell layer-xml col-what implemented" data-cell="C4">
                     <div class="title">UBL Documents</div>
                     <div class="subtext">XML Invoices</div>
                 </div>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="holon-cell layer-xml col-where" data-cell="E4">
                     <div class="title">Storage Drives</div>
-                    <div class="subtext">/var/lib/basex</div>
+                    <div class="subtext">/var/lib/nosql</div>
                 </div>
                 <div class="holon-cell layer-xml col-when" data-cell="F4">
                     <div class="title">Creation Date</div>
@@ -213,9 +213,9 @@
                     <div class="title">Live Execution</div>
                     <div class="subtext">Running Containers</div>
                 </div>
-                <div class="holon-cell layer-inst col-what" data-cell="C6">
+                <div class="holon-cell layer-inst col-what implemented" data-cell="C6">
                     <div class="title">Graph Instances</div>
-                    <div class="subtext">TerminusDB Instances</div>
+                    <div class="subtext">Graph DDBB Instances</div>
                 </div>
                 <div class="holon-cell layer-inst col-who" data-cell="D6">
                     <div class="title">Active Actors</div>
@@ -248,6 +248,7 @@
             <div class="modal-body">
                 <h3>Implementation Details</h3>
                 <p id="modal-desc">Description of the holon goes here.</p>
+                <div id="modal-image-container" style="text-align: center; margin: 15px 0;"></div>
                 <div class="mock-data-viz">
                     <p class="mock-code" id="modal-code">
                         // Mock JSON-LD or code snippet here
@@ -256,6 +257,10 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <p><em>Disclaimer: "Zachman®" and "Zachman International®" are registered trademarks of Zachman International, Inc. This Enterprise Reference Atlas is an independent development by AI2Accountans and is not affiliated with, authorized, or endorsed by Zachman International, Inc.</em></p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
